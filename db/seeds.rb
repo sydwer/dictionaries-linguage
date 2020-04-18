@@ -14,13 +14,15 @@ verbs = ["Able","Eat", "Enjoy", "Die", "Give", "Have", "Say",
 # )
 
 nouns.map{
-    |noun| Noun.create(
-        english: noun
+    |noun| Word.create(
+        english: noun,
+        category: "noun",
     )
 }
 
 verbs.map{
     |verb| Word.create(
-        english: verb
+        english: verb,
+        category: "verb",
     )
 }
