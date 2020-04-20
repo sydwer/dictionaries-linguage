@@ -9,6 +9,12 @@ verbs = ["Able","Eat", "Enjoy", "Die", "Give", "Have", "Say",
 "Copula", "Want","Will",
 ];
 
+tenses =["Past","Present","Future", "Imperfect", "Conditional"
+];
+
+determiners = ["The", "A","This", "That"
+,]
+
 # bear = Noun.create(
 #     english: "Bear",
 # )
