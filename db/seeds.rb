@@ -21,6 +21,9 @@ grammar = [nouns, pronouns, verbs, tenses, determiners, prepositions];
 
 languages = ["English", "German", "Japanese"];
 
+
+
+
 # make all of these just 'word' but then filter for route with category, or make join table?
 
 
@@ -67,14 +70,6 @@ prepositions.map{
     )
 }
 
-# grammar.map{
-#     |part_of_speech_dictionary| part_of_speech_dictionary.map{
-#         |entry| Word.create(
-#             english: entry,
-#             category: part_of_speech_dictionary,
-#         )
-#     }
-# }
 
 languages.map{
     |language| Language.create(
