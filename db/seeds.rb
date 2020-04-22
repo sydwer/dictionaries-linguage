@@ -1,8 +1,8 @@
 # Noun.destroy_all
 Word.destroy_all
 
-nouns = {noun: ["Apple","Bear","Book", "Cat", "Dinner", "Fish",
-"Hello", "House","Hunger", "River","Rock", "Ten","Tree"]};
+nouns = ["Apple","Bear","Book", "Cat", "Dinner", "Fish",
+"Hello", "House","Hunger", "River","Rock", "Ten","Tree"];
 
 pronouns = ["I", "You","(Formal) You", "He", "She", "It", "We", "You (Plural)",
 "Them", "Them (Masculine)", "Them (Feminine)", "Them (Neutral)"]
@@ -18,6 +18,8 @@ prepositions = ["By", "Through", "Along", "For", "Against",
 "Towards", "Without","About","From"];
 
 grammar = [nouns, pronouns, verbs, tenses, determiners, prepositions]
+
+# make all of these just 'word' but then filter for route with category, or make join table?
 
 
 
