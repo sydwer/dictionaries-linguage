@@ -1,4 +1,3 @@
-# Noun.destroy_all
 Word.destroy_all
 
 nouns = ["Apple","Bear","Book", "Cat", "Dinner", "Fish",
