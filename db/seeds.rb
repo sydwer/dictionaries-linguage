@@ -1,4 +1,5 @@
 Word.destroy_all
+Language.destroy_all
 
 nouns = ["Apple","Bear","Book", "Cat", "Dinner", "Fish",
 "Hello", "House","Hunger", "River","Rock", "Ten","Tree"];
@@ -16,7 +17,9 @@ determiners = ["The", "A", "This", "That"];
 prepositions = ["By", "Through", "Along", "For", "Against",
 "Towards", "Without","About","From"];
 
-grammar = [nouns, pronouns, verbs, tenses, determiners, prepositions]
+grammar = [nouns, pronouns, verbs, tenses, determiners, prepositions];
+
+languages = ["English", "German", "Japanese"];
 
 # make all of these just 'word' but then filter for route with category, or make join table?
 
@@ -72,3 +75,9 @@ prepositions.map{
 #         )
 #     }
 # }
+
+languages.map{
+    |language| Language.create(
+        name: language
+    )
+}
