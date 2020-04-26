@@ -1,0 +1,3 @@
+class DictionaryEntriesController < ApplicationController
+   
+end
