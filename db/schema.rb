@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_22_215414) do
+ActiveRecord::Schema.define(version: 2020_04_26_035657) do
+
+  create_table "dictionaries", force: :cascade do |t|
+    t.string "part_of_speech"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "dictionary_entries", force: :cascade do |t|
+    t.integer "word_id"
+    t.integer "dictionary_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["dictionary_id"], name: "index_dictionary_entries_on_dictionary_id"
+    t.index ["word_id"], name: "index_dictionary_entries_on_word_id"
+  end
 
   create_table "languages", force: :cascade do |t|
     t.string "name"
