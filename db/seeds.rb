@@ -149,3 +149,19 @@ genitive_determiners = Dictionary.create (
 genitive_prepositions = Dictionary.create (
     part_of_speech: "genitive preposition"
 )
+
+nominative_suffix = Dictionary.create (
+    part_of_speech "nominative suffix"
+)
+
+accusative_suffix = Dictionary.create (
+    part_of_speech "accusative suffix"
+)
+
+dative_suffix = Dictionary.create (
+    part_of_speech "dative suffix"
+)
+
+genitive_suffix = Dictionary.create (
+    part_of_speech "genitive suffix"
+)
