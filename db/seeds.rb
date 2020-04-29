@@ -17,6 +17,8 @@ determiners_words = ["The", "A", "This", "That"];
 prepositions_words = ["By", "Through", "Along", "For", "Against",
 "Towards", "Without","About","From"];
 
+particles = ["Topic","Subject", "Object", "Also", "Toward", "From", "By", "At"]
+
 grammar = [nouns, pronouns, verbs, tenses, determiners, prepositions];
 
 languages = ["English", "German", "Japanese"];
@@ -69,6 +71,11 @@ prepositions_words.map{
         english: preposition,
         category: "preposition",
     )
+}
+
+particles.map{
+    english: particle,
+    category: "particle",
 }
 
 
