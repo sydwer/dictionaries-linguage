@@ -17,7 +17,7 @@ determiners_words = ["The", "A", "This", "That"];
 prepositions_words = ["By", "Through", "Along", "For", "Against",
 "Towards", "Without","About","From"];
 
-particles = ["Topic","Subject", "Object", "Also", "Toward", "From", "By", "At"]
+particles_words = ["Topic","Subject", "Object", "Also", "Toward", "From", "By", "At"]
 
 grammar = [nouns, pronouns, verbs, tenses, determiners, prepositions];
 
@@ -73,7 +73,7 @@ prepositions_words.map{
     )
 }
 
-particles.map{
+particles_words.map{
     english: particle,
     category: "particle",
 }
@@ -157,18 +157,35 @@ genitive_prepositions = Dictionary.create (
     part_of_speech: "genitive preposition"
 )
 
-nominative_suffix = Dictionary.create (
-    part_of_speech "nominative suffix"
+nominative_suffixes = Dictionary.create (
+    part_of_speech: "nominative suffix"
 )
 
-accusative_suffix = Dictionary.create (
-    part_of_speech "accusative suffix"
+accusative_suffixes = Dictionary.create (
+    part_of_speech: "accusative suffix"
 )
 
-dative_suffix = Dictionary.create (
-    part_of_speech "dative suffix"
+dative_suffixes = Dictionary.create (
+    part_of_speech: "dative suffix"
 )
 
-genitive_suffix = Dictionary.create (
-    part_of_speech "genitive suffix"
+genitive_suffixes = Dictionary.create (
+    part_of_speech: "genitive suffix"
+)
+
+particles = Dictionary.create (
+    part_of_speech: "particles"
+)
+
+def find(array,string){
+    array.select { |entry| entry.english == string }
+}
+
+apple = DictionaryEntry.create(
+    word_id: find(noun_words, "Apple"),
+    dictionary_id: nouns
+)
+bear = DictionaryEntry.create(
+    word_id: find(noun_words, "Bear"),
+    dictionary_id: nouns
 )
