@@ -40,6 +40,11 @@ nouns_words.map{
     )
 }
 
+apple_test = Word.create(
+    english: "Apple",
+    category: "noun",
+)
+
 verbs_words.map{
     |verb| Word.create(
         english: verb,
@@ -181,73 +186,75 @@ particles = Dictionary.create(
     part_of_speech: "particles"
 )
 
-def find(array,string)
-    target = array.find{ |entry| entry.english == string }
+def find(string)
+    # array.find{ |entry| entry.english == string }
+    target = Word.all.find{ |entry| entry.english == string }
     return target
+    
 end
 
 apple = DictionaryEntry.create(
-    word_id: find(noun_words, "Apple"),
-    dictionary_id: nouns
+    word_id: find("Apple").id,
+    dictionary_id: nouns.id
 )
 bear = DictionaryEntry.create(
-    word_id: find(noun_words, "Bear"),
-    dictionary_id: nouns
+    word_id: find("Bear").id,
+    dictionary_id: nouns.id
 )
 
 book = DictionaryEntry.create(
-    word_id: find(noun_words, "Book"),
-    dictionary_id: nouns
+    word_id: find("Book").id,
+    dictionary_id: nouns.id
 )
 
 cat = DictionaryEntry.create(
-    word_id: find(noun_words, "Cat"),
-    dictionary_id: nouns
+    word_id: find("Cat").id,
+    dictionary_id: nouns.id
 )
 
 dinner = DictionaryEntry.create(
-    word_id: find(noun_words, "Dinner"),
-    dictionary_id: nouns
+    word_id: find("Dinner").id,
+    dictionary_id: nouns.id
 )
 
 fish = DictionaryEntry.create(
-    word_id: find(noun_words, "Fish"),
-    dictionary_id: nouns
+    word_id: find("Fish").id,
+    dictionary_id: nouns.id
 )
 
 hello = DictionaryEntry.create(
-    word_id: find(noun_words, "Hello"),
-    dictionary_id: nouns
+    word_id: find("Hello").id,
+    dictionary_id: nouns.id
 )
 
 house = DictionaryEntry.create(
-    word_id: find(noun_words, "House"),
-    dictionary_id: nouns
+    word_id: find("House").id,
+    dictionary_id: nouns.id
 )
 
 hunger = DictionaryEntry.create(
-    word_id: find(noun_words, "Hunger"),
-    dictionary_id: nouns
+    word_id: find("Hunger").id,
+    dictionary_id: nouns.id
 )
 
 river = DictionaryEntry.create(
-    word_id: find(noun_words, "River"),
-    dictionary_id: nouns
+    word_id: find("River").id,
+    dictionary_id: nouns.id
 )
 
 rock = DictionaryEntry.create(
-    word_id: find(noun_words, "Rock"),
-    dictionary_id: nouns
+    word_id: find("Rock").id,
+    dictionary_id: nouns.id
 )
 
 ten = DictionaryEntry.create(
-    word_id: find(noun_words, "Ten"),
-    dictionary_id: nouns
+    word_id: find("Ten").id,
+    dictionary_id: nouns.id
 )
 
 tree = DictionaryEntry.create(
-    word_id: find(noun_words, "Tree"),
-    dictionary_id: nouns
+    word_id: find("Tree").id,
+    dictionary_id: nouns.id
 )
 
 
