@@ -45,7 +45,7 @@ nouns_words = nouns_english.map{
 #     category: "noun",
 # )
 
-verbs_english.map{
+verbs_words = verbs_english.map{
     |verb| Word.create(
         english: verb,
         category: "verb",
@@ -257,50 +257,63 @@ tree = DictionaryEntry.create(
     dictionary_id: nouns.id
 )
 
-
-
 i = DictionaryEntry.create(
-    word_id: find(pronouns_words, "I")
+    word_id: find(pronouns_words, "I"),
+    dictionary_id: caseless_pronouns.id
 )
 
 you = DictionaryEntry.create(
-    word_id: find(pronouns_words, "You")
+    word_id: find(pronouns_words, "You"),
+    dictionary_id: caseless_pronouns.id
 )
 
 formal_you = DictionaryEntry.create(
-    word_id: find(pronouns_words, "(Formal) You")
+    word_id: find(pronouns_words, "(Formal) You"),
+    dictionary_id: caseless_pronouns.id
 )
 
 he = DictionaryEntry.create(
-    word_id: find(pronouns_words, "He")
+    word_id: find(pronouns_words, "He"),
+    dictionary_id: caseless_pronouns.id
 )
 
 she = DictionaryEntry.create(
-    word_id: find(pronouns_words, "She")
+    word_id: find(pronouns_words, "She"),
+    dictionary_id: caseless_pronouns.id
 )
 
 it = DictionaryEntry.create(
-    word_id: find(pronouns_words, "It")
+    word_id: find(pronouns_words, "It"),
+    dictionary_id: caseless_pronouns.id
 )
 
 we = DictionaryEntry.create(
-    word_id: find(pronouns_words, "We")
+    word_id: find(pronouns_words, "We"),
+    dictionary_id: caseless_pronouns.id
 )
 
 plural_you = DictionaryEntry.create(
-    word_id: find(pronouns_words, "(Plural) You")
+    word_id: find(pronouns_words, "(Plural) You"),
+    dictionary_id: caseless_pronouns.id
 )
 
 masculine_them = DictionaryEntry.create(
-    word_id: find(pronouns_words, "(Masculine) Them")
+    word_id: find(pronouns_words, "(Masculine) Them"),
+    dictionary_id: caseless_pronouns.id
 )
 
 feminine_them = DictionaryEntry.create(
-    word_id: find(pronouns_words, "(Feminine) Them")
+    word_id: find(pronouns_words, "(Feminine) Them"),
+    dictionary_id: caseless_pronouns.id
 )
 
 neutral_them = DictionaryEntry.create(
-    word_id: find(pronouns_words, "(Neutral) Them")
+    word_id: find(pronouns_words, "(Neutral) Them"),
+    dictionary_id: caseless_pronouns.id
 )
+["Able","Eat", "Enjoy", "Die", "Give", "Have", "Say",
+"Copula", "Want","Will"];
+
+able = DictionaryEntry.create()
 
 
