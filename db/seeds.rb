@@ -6,8 +6,8 @@ DictionaryEntry.destroy_all
 nouns_english = ["Apple","Bear","Book", "Cat", "Dinner", "Fish",
 "Hello", "House","Hunger", "River","Rock", "Ten","Tree"];
 
-pronouns_english = ["I", "You","(Formal) You", "He", "She", "It", "We", "You (Plural)",
-"Them", "Them (Masculine)", "Them (Feminine)", "Them (Neutral)"]
+pronouns_english = ["I", "You","(Formal) You", "He", "She", "It", "We", "(Plural) You",
+"Them", "(Masculine) Them", "(Feminine) Them", "(Neutral) Them"]
 
 verbs_english = ["Able","Eat", "Enjoy", "Die", "Give", "Have", "Say",
 "Copula", "Want","Will"];
@@ -66,7 +66,7 @@ determiners_english.map{
     )
 }
 
-pronouns_english.map{
+pronouns_words = pronouns_english.map{
     |pronoun| Word.create(
         english: pronoun,
         category: "pronoun",
@@ -255,6 +255,52 @@ ten = DictionaryEntry.create(
 tree = DictionaryEntry.create(
     word_id: find(nouns_words,"Tree").id,
     dictionary_id: nouns.id
+)
+
+
+
+i = DictionaryEntry.create(
+    word_id: find(pronouns_words, "I")
+)
+
+you = DictionaryEntry.create(
+    word_id: find(pronouns_words, "You")
+)
+
+formal_you = DictionaryEntry.create(
+    word_id: find(pronouns_words, "(Formal) You")
+)
+
+he = DictionaryEntry.create(
+    word_id: find(pronouns_words, "He")
+)
+
+she = DictionaryEntry.create(
+    word_id: find(pronouns_words, "She")
+)
+
+it = DictionaryEntry.create(
+    word_id: find(pronouns_words, "It")
+)
+
+we = DictionaryEntry.create(
+    word_id: find(pronouns_words, "We")
+)
+
+plural_you = DictionaryEntry.create(
+    word_id: find(pronouns_words, "(Plural) You")
+)
+
+masculine_them = DictionaryEntry.create(
+    word_id: find(pronouns_words, "(Masculine) Them")
+)
+
+feminine_them = DictionaryEntry.create(
+    word_id: find(pronouns_words, "(Feminine) Them")
+)
+
+neutral_them = DictionaryEntry.create(
+    word_id: find(pronouns_words, "(Neutral) Them")
 )
 
 
