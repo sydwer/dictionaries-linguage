@@ -311,8 +311,7 @@ neutral_them = DictionaryEntry.create(
     word_id: find(pronouns_words, "(Neutral) Them").id,
     dictionary_id: caseless_pronouns.id
 )
-["Give", "Have", "Say",
-"Copula", "Want","Will"];
+
 
 able = DictionaryEntry.create(
     word_id: find(verbs_words, "Able").id,
@@ -364,7 +363,7 @@ will = DictionaryEntry.create(
     dictionary_id: verbs.id
 )
 
-"Past","Present", "Future", "Imperfect", "Conditional"
+
 
 past = DictionaryEntry.create(
     word_id: find(tenses_words, "Past"),
