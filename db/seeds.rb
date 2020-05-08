@@ -12,7 +12,7 @@ pronouns_english = ["I", "You","(Formal) You", "He", "She", "It", "We", "(Plural
 verbs_english = ["Able","Eat", "Enjoy", "Die", "Give", "Have", "Say",
 "Copula", "Want","Will"];
 
-tenses_english =["Past","Present", "Future", "Imperfect", "Conditional"];
+tenses_english =["Past","Present", "Future", "Imperfect", "Conditional", "Non-Past"];
 
 determiners_english = ["The", "A", "This", "That"];
 
@@ -52,7 +52,7 @@ verbs_words = verbs_english.map{
     )
 }
 
-tenses_english.map{
+tenses_words = tenses_english.map{
     |tense| Word.create(
         english: tense,
         category: "tense",
@@ -311,8 +311,7 @@ neutral_them = DictionaryEntry.create(
     word_id: find(pronouns_words, "(Neutral) Them").id,
     dictionary_id: caseless_pronouns.id
 )
-["Give", "Have", "Say",
-"Copula", "Want","Will"];
+
 
 able = DictionaryEntry.create(
     word_id: find(verbs_words, "Able").id,
@@ -364,4 +363,35 @@ will = DictionaryEntry.create(
     dictionary_id: verbs.id
 )
 
+
+
+past = DictionaryEntry.create(
+    word_id: find(tenses_words, "Past"),
+    dictionary_id: tenses.id
+)
+
+present = DictionaryEntry.create(
+    word_id: find(tenses_words. "Present"),
+    dictionary_id: tenses.id
+)
+
+future = DictionaryEntry.create(
+    word_id: find(tenses_words. "Future"),
+    dictionary_id: tenses.id
+)
+
+imperfect = DictionaryEntry.create(
+    word_id: find(tenses_words. "Imperfect"),
+    dictionary_id: tenses.id
+)
+
+conditional = DictionaryEntry.create(
+    word_id: find(tenses_words. "Conditional"),
+    dictionary_id: tenses.id
+)
+
+non_past = DictionaryEntry.create(
+    word_id: find(tenses_words. "Non-Past"),
+    dictionary_id: tenses.id
+)
 
