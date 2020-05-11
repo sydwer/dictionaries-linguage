@@ -14,7 +14,8 @@ verbs_english = ["Able","Eat", "Enjoy", "Die", "Give", "Have", "Say",
 
 tenses_english =["Past","Present", "Future", "Imperfect", "Conditional", "Non-Past"];
 
-determiners_english = ["The", "A", "This", "That"];
+determiners_english = ["The", "A", "This", "That", "(Close To Speaker)","(Close To Listener)",
+"(Far From Listener And Speaker)", "(Which One)"];
 
 prepositions_english = ["By", "Through", "Along", "For", "Against",
 "Towards", "Without","About","From"];
@@ -363,8 +364,6 @@ will = DictionaryEntry.create(
     dictionary_id: verbs.id
 )
 
-
-
 past = DictionaryEntry.create(
     word_id: find(tenses_words, "Past"),
     dictionary_id: tenses.id
@@ -394,4 +393,7 @@ non_past = DictionaryEntry.create(
     word_id: find(tenses_words. "Non-Past"),
     dictionary_id: tenses.id
 )
+
+determiners_english = ["The", "A", "This", "That", "(Close To Speaker)","(Close To Listener)",
+"(Far From Listener And Speaker)", "(Which One)"];
 
