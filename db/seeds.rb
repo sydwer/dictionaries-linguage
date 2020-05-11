@@ -14,7 +14,8 @@ verbs_english = ["Able","Eat", "Enjoy", "Die", "Give", "Have", "Say",
 
 tenses_english =["Past","Present", "Future", "Imperfect", "Conditional", "Non-Past"];
 
-determiners_english = ["The", "A", "This", "That"];
+determiners_english = ["The", "A", "This", "That", "(Close To Speaker)","(Close To Listener)",
+"(Far From Listener And Speaker)"];
 
 prepositions_english = ["By", "Through", "Along", "For", "Against",
 "Towards", "Without","About","From"];
