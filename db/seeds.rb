@@ -370,7 +370,7 @@ past = DictionaryEntry.create(
 )
 
 present = DictionaryEntry.create(
-    word_id: find(tenses_word,. "Present"),
+    word_id: find(tenses_words, "Present"),
     dictionary_id: tenses.id
 )
 
