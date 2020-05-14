@@ -370,30 +370,30 @@ past = DictionaryEntry.create(
 )
 
 present = DictionaryEntry.create(
-    word_id: find(tenses_words. "Present"),
+    word_id: find(tenses_words, "Present"),
     dictionary_id: tenses.id
 )
 
 future = DictionaryEntry.create(
-    word_id: find(tenses_words. "Future"),
+    word_id: find(tenses_words, "Future"),
     dictionary_id: tenses.id
 )
 
 imperfect = DictionaryEntry.create(
-    word_id: find(tenses_words. "Imperfect"),
+    word_id: find(tenses_words, "Imperfect"),
     dictionary_id: tenses.id
 )
 
 conditional = DictionaryEntry.create(
-    word_id: find(tenses_words. "Conditional"),
+    word_id: find(tenses_words, "Conditional"),
     dictionary_id: tenses.id
 )
 
 non_past = DictionaryEntry.create(
-    word_id: find(tenses_words. "Non-Past"),
+    word_id: find(tenses_words, "Non-Past"),
     dictionary_id: tenses.id
 )
 
-determiners_english = ["The", "A", "This", "That", "(Close To Speaker)","(Close To Listener)",
-"(Far From Listener And Speaker)", "(Which One)"];
+# determiners_english = ["The", "A", "This", "That", "(Close To Speaker)","(Close To Listener)",
+# "(Far From Listener And Speaker)", "(Which One)"];
 
