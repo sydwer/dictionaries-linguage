@@ -397,3 +397,40 @@ non_past = DictionaryEntry.create(
 # determiners_english = ["The", "A", "This", "That", "(Close To Speaker)","(Close To Listener)",
 # "(Far From Listener And Speaker)", "(Which One)"];
 
+the = DictionaryEntry.create(
+    word_id: find(determiners_words, "The"),
+    dictionary_id: determiners
+)
+a = DictionaryEntry.create(
+    word_id: find(determiners_words, "A"),
+    dictionary_id: determiners
+)
+this = DictionaryEntry.create(
+    word_id: find(determiners_words, ""),
+    dictionary_id: determiners
+)
+that = DictionaryEntry.create(
+    word_id: find(determiners_words, ""),
+    dictionary_id: determiners
+)
+close_to_speaker = DictionaryEntry.create(
+    word_id: find(determiners_words, ""),
+    dictionary_id: determiners
+)
+close_to_listener = DictionaryEntry.create(
+    word_id: find(determiners_words, ""),
+    dictionary_id: determiners
+)
+far_from_listener_and_speaker = DictionaryEntry.create(
+    word_id: find(determiners_words, ""),
+    dictionary_id: determiners
+)
+which_one = DictionaryEntry.create(
+    word_id: find(determiners_words, ""),
+    dictionary_id: determiners
+)
+ = DictionaryEntry.create(
+    word_id: find(determiners_words, ""),
+    dictionary_id: determiners
+)
+
